@@ -1,0 +1,123 @@
+<html>
+<head>
+    {% load static %}
+<style>
+#outer
+{height:600px;
+width:1000px;
+//border:1px solid white;
+margin:0px auto;
+}
+body {
+   font-family: $font-family;
+   font-size: $font-size;
+   background-size: 200% 100% !important;
+    animation: move 10s ease infinite;
+    transform: translate3d(0, 0, 0);
+    background: linear-gradient(45deg, #49D49D 10%, #A2C7E5 90%);
+    height: 100vh
+}
+ #menu{height:50px;
+width:1000px;
+background-color:black;
+border-radius:0px 0px 0px 0px;
+border:1px solid white;}
+
+#slider{height:260px;
+width:1000px;
+background-color:white;
+margin-top:5px;}
+
+#parent{height:601px;
+width:1000px;
+margin-top:5px;}
+
+#lside{height:601px;
+width:700px;
+background-color:white;
+float:left;
+border-radius:0px 0px 0px 20px;}
+
+#rside{height:601px;
+width:300px;
+background-color:#03adfc;
+float:right;
+border-radius:0px 0px 20px 0px;}
+
+#header
+{height:100px;
+width:1000px;
+background-color:#03adfc;
+border-radius:20px 20px 0px 0px;
+border:1px solid white;
+color:white;
+margin-top:20px;}
+
+.one
+{height:240px;
+width:310;
+border :1px solid;
+margin-left:15px;
+margin-top:15px;
+float:left;}
+
+#menu ul
+{
+list-style-type:none;
+}
+#menu ul li
+{
+display:inline;
+padding:10px;
+//border:1px solid;
+}
+#menu ul li a
+{
+color:white;
+text-decoration:none;
+}
+#menu ul li:hover
+{
+background-color:orange;
+}
+
+h1 {
+  color: #474544;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 7px;
+  text-align: center;
+  text-transform: uppercase;
+}
+</style>
+
+</head>
+<body bgcolor="grey">
+
+<div id="outer">
+    <div id="header"><center><h1>Digi Sign and Verify</h1></center></div>
+<div id="menu">
+<ul>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<li><a href="#">HOME</a></li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<li><a href="{% url 'aboutus' %}">ABOUT US</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<li><a href="{% url 'registration' %}">REGISTRATION</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<li><a href="{% url 'login' %}">LOGIN</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<li><a href="{% url 'contactus' %}">CONTACT US</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+</ul>
+</div>
+
+
+<div id="parent">
+<div id="lside"><img src="{% static 'images/sign.jpg' %}"/></div>
+    <div id="rside"><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><centre><h1>Digitally<br/>Sign<br/>Your<br/>Document</h1>
+</centre>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
